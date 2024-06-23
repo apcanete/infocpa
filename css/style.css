@@ -1,0 +1,124 @@
+/*
+Colors used:
+
+Primary Color (White): #F5F5F5;
+Secondary Color (Blue): #809CC4;
+Secondary Color (Lavender): #472C7A;
+Secondary Color (Light Blue): #B9C9D8;
+Secondary Color (Black): #0e0e0e;
+Secondary Color (Grey): #383d42;
+
+*/
+
+
+/* font size, weight, line height for body and header */
+
+body {
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; /* Sets the font size to 16px */
+  font-weight: 300; /* Sets the font weight to 300 */
+  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  color: #0e0e0e;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
+}
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+/* image width */
+
+img {
+  width: 100%;
+}
+
+/* link stylings */
+
+a {
+  color: #F5F5F5;
+  text-decoration: none; /* No underlining */
+}
+
+a:hover,
+a:focus {
+  color: #383d42;
+}
+
+a:active { /* selected link */
+  color: #0e0e0e;
+}
+
+
+
+
+/* button styling: view more, about.html, email */
+
+
+.button {
+  display: inline-block; 
+  background-color: #809CC4;
+  color: #ffffff; 
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #8180c4; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+
+
+
+.header-button { /* header button styling*/
+  display: inline-block; 
+  background-color: #0c0b41;
+  color: #ffffff; 
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px;
+}
+
+#header, a{
+  color: #383d42;
+  text-decoration: none;
+
+}
+
+#header a:hover,
+a:focus {
+  color: #383d42;
+}
+
+#header a:active { /* selected link */
+  color: #0e0e0e;
+}
+
+#banner h1, h4 {
+  line-height: 1.4;
+}
+#banner h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+#banner h2 {
+  font-size: 2.10em;
+  font-weight: 400;
+}
