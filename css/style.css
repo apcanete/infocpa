@@ -10,6 +10,16 @@ Secondary Color (Grey): #383d42;
 
 */
 
+/*header*/
+
+header {
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  top: 0;
+  background-color: #0c0b41;
+  border-bottom: 10px solid #0c0b41;
+}
 
 /* font size, weight, line height for body and header */
 
@@ -67,6 +77,11 @@ a:active { /* selected link */
 }
 
 
+div {
+  margin: 0 auto;
+  text-align: center;
+  width: 95%;
+}
 
 
 /* button styling: view more, about.html, email */
@@ -89,29 +104,32 @@ a:active { /* selected link */
   display: inline-block; 
   background-color: #0c0b41;
   color: #ffffff; 
-  font-weight: 400;
+  font-weight: 500;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px;
+  text-align: right;
 }
 
-#header, a{
+#headernav, a{
   color: #383d42;
   text-decoration: none;
 
 }
 
-#header a:hover,
+#headernav a:hover,
 a:focus {
   color: #383d42;
 }
 
-#header a:active { /* selected link */
+#headernav a:active { /* selected link */
   color: #0e0e0e;
 }
 
 #banner h1, h4 {
   line-height: 1.4;
+  color: #00283F;
+  font-weight: 600;
 }
 #banner h1 {
   font-size: 2.75em;
@@ -121,4 +139,44 @@ a:focus {
 #banner h2 {
   font-size: 2.10em;
   font-weight: 400;
+}
+
+.container {
+  padding: 20px 0;
+  width: 100%;
+}
+
+footer {
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  top: 0;
+  border-top: 8px solid #0c0b41;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#biopic {
+  float: left;
+  margin-left: 500px;
+  width: 20%;
+}
+
+#speclist {
+  float: left;
+  margin-left: 50px;
+  width: 20%;
+  text-align: left;
+}
+
+#bio {
+  padding-top: 400px;
+  position: relative;
+  text-align: justify;
+  margin-left: 20px;
+  width: 50%;
+  
 }
