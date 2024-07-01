@@ -194,7 +194,7 @@ Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
   header {
-    text-align: unset
+    text-align: unset;
   }
 
   nav {
