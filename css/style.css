@@ -13,12 +13,12 @@ Secondary Color (Grey): #383d42;
 /*header*/
 
 header {
-  padding: 10px;
-  margin: 10px;
   width: 100%;
-  top: 0;
-  background-color: #0c0b41;
-  border-bottom: 10px solid #0c0b41;
+  padding-bottom: 130px;
+  background-color: #12122C;
+  background-size: auto;
+  text-align: unset;
+  background-clip: border-box;
 }
 
 /* font size, weight, line height for body and header */
@@ -92,20 +92,22 @@ div {
   background-color: #809CC4;
   color: #ffffff; 
   font-weight: 400;
+  text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid #8180c4; /* width of the border, type, color */
-  transition: 0.2s opacity;
+  border-bottom: 5px solid #ffffff; /* width of the border, type, color */
+  transition: 0.5s opacity;
 }
 
 
 
 .header-button { /* header button styling*/
-  display: inline-block; 
-  background-color: #0c0b41;
+  display: inline-table; 
+  background-color:#12122C;
   color: #ffffff; 
   font-weight: 500;
-  padding: 10px;
+  padding: 15px;
+  border-top: 60px;
   border-radius: 3px;
   border-bottom: 2px;
   text-align: right;
@@ -126,32 +128,29 @@ a:focus {
   color: #0e0e0e;
 }
 
-#banner h1, h4 {
+#banner h1 {
   line-height: 1.4;
   color: #00283F;
   font-weight: 600;
+
 }
 #banner h1 {
   font-size: 2.75em;
   font-weight: 700;
 }
 
-#banner h2 {
-  font-size: 2.10em;
-  font-weight: 400;
-}
 
 .container {
-  padding: 20px 0;
-  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer {
   padding: 10px;
   margin: 10px;
   width: 100%;
-  top: 0;
-  border-top: 8px solid #0c0b41;
+  top: 10px;
 }
 
 ul {
@@ -179,4 +178,97 @@ ul {
   margin-left: 20px;
   width: 50%;
   
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset
+  }
+
+  nav {
+    width: auto;
+    float: right;
+  }
+}
+
+.col-md-6 .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  header {
+    text-align: unset;
+  } 
+  nav {
+    width: auto;
+    float: right;
+  }
+}
+
+
+.col-lg-7 .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+  header {
+    text-align: unset;
+  } 
+  nav {
+    width: auto;
+    float: right;
+  }
+}
+
+/*sun*/
+
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
