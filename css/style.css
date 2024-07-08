@@ -2,7 +2,7 @@
 Colors used:
 
 Primary Color (White): #F5F5F5;
-Secondary Color (Blue): #809CC4;
+Secondary Color (Blue): #12122C;
 Secondary Color (Lavender): #472C7A;
 Secondary Color (Light Blue): #B9C9D8;
 Secondary Color (Black): #0e0e0e;
@@ -12,16 +12,11 @@ Secondary Color (Grey): #383d42;
 
 /*header*/
 
-header {
-  width: 100%;
-  padding-bottom: 130px;
-  background-color: #12122C;
-  background-size: auto;
-  text-align: unset;
-  background-clip: border-box;
-}
 
-/* font size, weight, line height for body and header */
+header {
+  background-color: #12122C;
+  position: relative;
+}
 
 body {
   background-color: #ffffff;
@@ -29,15 +24,19 @@ body {
   font-size: 16px; /* Sets the font size to 16px */
   font-weight: 300; /* Sets the font weight to 300 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-  color: #0e0e0e;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   line-height: 1.4;
 }
+
 h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 2.75em;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 h2 {
@@ -47,45 +46,39 @@ h2 {
 
 h3 {
   font-size: 1.75em;
-  font-weight: 400;
-}
-h4 {
-  font-size: 1.35em;
-  font-weight: 400;
+  font-weight: 600;
 }
 
-/* image width */
+h4 {
+  font-size: 1.35em;
+  font-weight: 500;
+}
 
 img {
   width: 100%;
 }
 
-/* link stylings */
+.logo {
+  max-width: 150px;
+}
+
+
 
 a {
   color: #F5F5F5;
   text-decoration: none; /* No underlining */
 }
 
+
 a:hover,
 a:focus {
   color: #383d42;
+  text-decoration: underline; /* Underlining when hovering over a link */
 }
 
-a:active { /* selected link */
-  color: #0e0e0e;
+a:active { /* Selected link */
+  color: #F5F5F5;
 }
-
-
-div {
-  margin: 0 auto;
-  text-align: center;
-  width: 95%;
-}
-
-
-/* button styling: view more, about.html, email */
-
 
 .button {
   display: inline-block; 
@@ -99,8 +92,6 @@ div {
   transition: 0.5s opacity;
 }
 
-
-
 .header-button { /* header button styling*/
   display: inline-table; 
   background-color:#12122C;
@@ -113,44 +104,27 @@ div {
   text-align: right;
 }
 
-#headernav, a{
-  color: #383d42;
+.button:visited { /* Visited link */
+  color: #fdf7ed;
+}
+
+.button:hover,
+.button:focus {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
   text-decoration: none;
-
 }
 
-#headernav a:hover,
-a:focus {
-  color: #383d42;
+.button:active { /* Selected link */
+  color: #a1bbce;
 }
 
-#headernav a:active { /* selected link */
-  color: #0e0e0e;
-}
 
-#banner h1 {
-  line-height: 1.4;
-  color: #00283F;
-  font-weight: 600;
 
-}
-#banner h1 {
-  font-size: 2.75em;
-  font-weight: 700;
-}
 
+/* Layout styling */
 
 .container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer {
-  padding: 10px;
-  margin: 10px;
-  width: 100%;
-  top: 10px;
+  margin: 0 16px;
 }
 
 ul {
@@ -158,26 +132,32 @@ ul {
   padding: 0;
 }
 
-#biopic {
-  float: left;
-  margin-left: 500px;
-  width: 20%;
+.footer .contact {
+ 
+  position: center;
 }
 
-#speclist {
-  float: left;
-  margin-left: 50px;
-  width: 20%;
-  text-align: left;
+
+
+#hero,
+#contact {
+  padding: 16px 0;
+  text-align: center; /* Centers text */
 }
 
-#bio {
-  padding-top: 400px;
-  position: relative;
-  text-align: justify;
-  margin-left: 20px;
-  width: 50%;
-  
+#about-title,
+#project-title {
+  padding: 8px 0;
+  margin: 16px 0;
+  text-align: center; /* Centers text */
+}
+
+#hero span {
+  font-weight: 600;
+  font-size: .8em;
+  display: block;
+  line-height: 1.2;
+  padding-top: 8px;
 }
 
 .col-md-6 {
@@ -189,58 +169,91 @@ ul {
 }
 
 
+.row {
+  margin: 32px 0; /* 32px top and bottom, 0 left and right */
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row.learnings {
+  margin: 16px 0;
+}
+
+
+
+
+
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
   header {
-    text-align: unset;
+      text-align: unset;
+      padding: 20px 0 13px;
   }
-
   nav {
     width: auto;
     float: right;
+    margin-top: 10px;
+  }
+  body {
+      font-size: 18px;
+  }
+  .col-md-6 {
+      width: 50%;
+      margin-top: -20px;
+  }
+
+  .col-md-12 {
+      width: 100%;
+  }
+
+ 
+  .logo {
+      max-width: 250px;
+  }
+  #biopic {
+    float: left;
+    margin-left: 400px;
+    width: 40%;
+  }
+  
+  #speclist {
+    float: left;
+    margin-left: 50px;
+    text-align: left;
   }
 }
-
-.col-md-6 .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
-  header {
-    text-align: unset;
-  } 
-  nav {
-    width: auto;
-    float: right;
+  
+  .col-lg-5 {
+      width: 41.66%;
   }
-}
-
-
-.col-lg-7 .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* ==============================
-X-large devices (1440px or larger)
-================================= */
-@media only screen and (min-width: 1440px) {
-  header {
-    text-align: unset;
-  } 
-  nav {
-    width: auto;
-    float: right;
+  .col-lg-7 {
+      width: 58.33%;
+      padding-bottom: 32px;
   }
+  .col-lg-12 {
+      width: 100%;
+      margin-top: 18px;
+  }
+
+  .container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 16px;
+  }
+
 }
 
 /*sun*/
