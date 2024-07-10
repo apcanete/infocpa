@@ -55,11 +55,17 @@ h4 {
 }
 
 img {
-  width: 100%;
+  width: 90%;
+}
+
+svg{
+width: 80%;
+max-width: 100%;
+height: auto;
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 100%;
 }
 
 
@@ -219,16 +225,11 @@ Medium devices (640px and larger)
   }
   #biopic {
     float: left;
-    margin-left: 400px;
+    margin-left: 450px;
     width: 40%;
   }
   
-  #speclist {
-    float: left;
-    margin-left: 50px;
-    text-align: left;
-  }
-}
+ 
 
 /* ==============================
 Large devices (1024px or larger)
@@ -284,4 +285,5 @@ Large devices (1024px or larger)
 
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
+}
 }
