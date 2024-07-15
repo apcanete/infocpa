@@ -1,3 +1,4 @@
+
 /*
 Colors used:
 
@@ -21,6 +22,8 @@ header {
 background-color: #12122C;
 position: relative;
 }
+
+
 
 body {
 background-color: #ffffff;
@@ -62,6 +65,15 @@ img {
 width: 90%;
 }
 
+.homepagebanner {
+  width: 100%;
+  position: relative;
+}
+
+#biopic img{
+  width: 350px;
+}
+
 svg{
 width: 80%;
 max-width: 100%;
@@ -69,7 +81,7 @@ height: auto;
 }
 
 .logo {
-max-width: 100%;
+max-width: 150px;
 }
 
 
@@ -79,10 +91,13 @@ color: #F5F5F5;
 text-decoration: none; /* No underlining */
 }
 
+a:hover{
+  text-decoration: underline;
+}
 
 a:hover,
 a:focus {
-color: #383d42;
+color: #F5F5F5;
 text-decoration: underline; /* Underlining when hovering over a link */
 }
 
@@ -107,27 +122,28 @@ display: inline-table;
 background-color:#12122C;
 color: #ffffff; 
 font-weight: 500;
-padding: 15px;
+padding: 10px;
 border-top: 60px;
 border-radius: 3px;
 border-bottom: 2px;
 text-align: right;
 }
 
-.button:visited { /* Visited link */
-color: #fdf7ed;
-}
+
 
 .button:hover,
 .button:focus {
 opacity: 0.8; /* Reduces the opacity of the button to 80% */
-text-decoration: none;
+text-decoration: underline;
 }
 
 .button:active { /* Selected link */
 color: #a1bbce;
 }
 
+.button:visited { /* Visited link */
+  color: #fdf7ed;
+  }
 
 
 
@@ -180,6 +196,35 @@ padding-top: 8px;
   display: table;
 }
 
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+  
+}
+
+.navtoggle li .icon {
+  position: absolute ;
+  right: 0 !important;
+  top: 2px;
+  font-size: 20px;
+}
+
+#myNavtoggle .icon {
+  position: absolute;
+  right: 15px;
+  top: 2px;
+  font-size: 20px;
+}
+
+#headernav nav > ul {
+  list-style-type: none;
+  text-align: right;
+}
+
+
 
 
 
@@ -187,7 +232,7 @@ padding-top: 8px;
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
 header {
     text-align: unset;
     padding: 20px 0 13px;
@@ -219,10 +264,41 @@ body {
 .logo {
     max-width: 250px;
 }
-#biopic {
-  float: left;
-  margin-left: 450px;
-  width: 40%;
+
+
+nav > ul > li {
+  display: inline-block;
+}
+
+.navtoggle {
+  margin-bottom: 10px;
+}
+
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+.navtoggle.responsive nav {
+  padding: 10px 0 0;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 5px;
+}
+
+.navtoggle li:last-child {
+  display: none;
 }
 
 }

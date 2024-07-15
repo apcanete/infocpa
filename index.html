@@ -4,21 +4,25 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <meta charset="utf-8">
         <title>Home - Theresa Pacheco, CPA</title>
-        <link href="img/icon.png" rel="shortcut icon">
+        <link href="index.html" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/08a25aaf96.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header id="headernav">
-             <div class="container">
-                <div>
-                <img class="logo" src="img/banner.svg" alt="Theresa Pacheco, CPA">
-                <nav>
-                    <a href="index.html" class="header-button">Home</a>
-                    <a href="about.html" class="header-button">About</a>
-                    <a href="#contact" class="header-button">Contact</a>
-                </nav>
-            </div>
-            </div>
+            <div class="container">
+                <div class="navtoggle" id="myNavtoggle">
+               <img class="logo" src="img/banner.svg" alt="Theresa Pacheco, CPA">
+               <nav>
+                <ul>
+                   <li><a href="index.html" class="header-button">Home</a></li>
+                   <li><a href="about.html" class="header-button">About</a></li>
+                   <li><a href="#contact" class="header-button">Contact</a></li>
+                   <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+                </ul>
+               </nav>
+           </div>
+           </div>
         </a>
     </header>
         <main>
@@ -26,7 +30,7 @@
             <div class="container">
                 <a>
                 <picture>
-                    <img src="img/homepage/motto.svg" alt="We can assist in managing your finances for a secure future">  
+                    <img class="homepagebanner" src="img/homepage/motto.svg" alt="We can assist in managing your finances for a secure future">  
                 </picture>
                 </a>
                 </div> <!--end banner-->
@@ -687,6 +691,7 @@
 
 
         <footer>
+            
             <div class="contact">
                 <h2>Get In Touch</h2>
                 <p>Contact info here</p>
@@ -696,6 +701,10 @@
                 <p>Copyright Angelica Alvarez 2023-2024</p>
             </div>
         </footer>
+        <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     </body>
 </html>
