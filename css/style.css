@@ -11,7 +11,8 @@ Secondary Color (Grey): #383d42;
 */
 
 /*header*/
-
+ * {box-sizing: border-box;
+}
 
 header {
   background-color: #12122C;
@@ -138,9 +139,8 @@ ul {
   padding: 0;
 }
 
-.footer .contact {
- 
-  position: center;
+.contact { 
+  text-align: center;
 }
 
 
@@ -166,6 +166,16 @@ ul {
   padding-top: 8px;
 }
 
+.row {
+  margin: 32px 0;
+}
+
+.row::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .col-md-6 {
   width: 50%;
 }
@@ -175,15 +185,6 @@ ul {
 }
 
 
-.row {
-  margin: 32px 0; /* 32px top and bottom, 0 left and right */
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
 .row.learnings {
   margin: 16px 0;
@@ -214,9 +215,17 @@ Medium devices (640px and larger)
       width: 50%;
       margin-top: -20px;
   }
+  .col-md-6-project{
+    width: 50%;
+    margin: 0 0 32px;
+  }
 
   .col-md-12 {
       width: 100%;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
   }
 
  
